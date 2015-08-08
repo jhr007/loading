@@ -6,9 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('welcome');
-  this.route('stay-loading');
-  this.route('show-error');
 });
 
 export default Router;

@@ -1,3 +1,32 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">{{#link-to 'index'}} Welcome to Ember{{/link-to}}</h2>
 
-{{outlet}}
+<div layout="row">
+    <div style="width: 33%; float: left;">
+  {{!--{{#md-sidenav class="md-sidenav-left md-whiteframe-z3"--}}
+      {{!--isLockedOpen=sidebarLeftLocked--}}
+      {{!--sidebarVisible=sidebarLeftVisible--}}
+      {{!--layout-padding=""}}--}}
+
+  {{!--                             {{#md-toolbar}}
+          <h1 class="md-toolbar-tools">Sidenav Left</h1>
+      {{/md-toolbar}} --}}
+
+      {{#each links as |l|}}
+        {{!--{{#md-button }}--}}
+
+          {{#link-to l.route}}
+            {{l.label}}
+          {{/link-to}}<br />
+
+        {{!--{{/md-button}}--}}
+      {{/each}}
+
+    </div>
+
+    <div flex>
+
+      {{outlet}}
+
+    </div>
+</div>
+
