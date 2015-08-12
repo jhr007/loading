@@ -44,5 +44,22 @@ module.exports = function(environment) {
 
   }
 
+  if (environment === 'gh-pages') {
+    baseURL: '/loading',
+  }
+
+
+  ENV.contentSecurityPolicy = {
+    'default-src': "'none'",
+    'script-src': "'self'",
+    'font-src': "'self'",
+    'connect-src': "'self'",
+    'img-src': "'self'",
+    'style-src': "'self' 'unsafe-inline'", //@TODO remove unsafe-inline
+    'media-src': "'self'"
+  };
+
+
+  
   return ENV;
 };
