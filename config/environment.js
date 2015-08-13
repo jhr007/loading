@@ -45,7 +45,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'gh-pages') {
-    baseURL: '/loading',
+    ENV.baseURL='/loading';
   }
 
 
@@ -60,6 +60,6 @@ module.exports = function(environment) {
   };
 
 
-  
+
   return ENV;
 };
